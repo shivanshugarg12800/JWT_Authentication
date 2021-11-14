@@ -6,21 +6,20 @@
   "dependencies": {
     "ejs": "^3.1.3",
     "express": "^4.17.1",
-    "mongoose": "^5.9.23"
+    "mongoose": "^5.9.23",
+    "nodemon": "^2.0.15",
+    "validator": "^13.7.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamshaunjp/node-express-jwt-auth.git"
+    "url": "https://github.com/shivanshugarg12800/JWT_Authentication"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/iamshaunjp/node-express-jwt-auth/issues"
-  },
-  "homepage": "https://github.com/iamshaunjp/node-express-jwt-auth#readme"
+  "license": "ISC"
 }
