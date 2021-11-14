@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 const mongoose = require("mongoose");
 const authRoutes = require("./routes/authRoutes");
 const app = express();
@@ -13,10 +14,8 @@ app.use(express.json());
 app.set("view engine", "ejs");
 
 // database connection
-const dbURI =
-  "mongodb+srv://shivanshu:shiv1234@nodejs.a7eor.mongodb.net/JWT-auth?retryWrites=true&w=majority";
 mongoose
-  .connect(dbURI, {
+  .connect(process.env.DATABASE, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
