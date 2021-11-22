@@ -1,6 +1,7 @@
 const express = require("express");
 require("dotenv").config();
 const mongoose = require("mongoose");
+const cookieParser = require("cookie-parser");
 const authRoutes = require("./routes/authRoutes");
 const app = express();
 
@@ -9,6 +10,8 @@ app.use(express.static("public"));
 // this is used to parse all the data submitted during post request in the Javascript object attach
 // with req object.
 app.use(express.json());
+// middleware to use cookie
+app.use(cookieParser());
 
 // view engine
 app.set("view engine", "ejs");
@@ -20,7 +23,7 @@ mongoose
     useUnifiedTopology: true,
     useCreateIndex: true,
   })
-  .then((result) => app.listen(5000))
+  .then(() => app.listen(5000))
   .catch((err) => console.log(err));
 
 // routes
